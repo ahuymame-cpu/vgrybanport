@@ -1,220 +1,433 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <title>Vlad Gryban — Director / VFX Supervisor / CG Artist</title>
+html {
+  scroll-behavior: smooth;
+}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+body {
+  background: #050608;
+  color: #f2f2f2;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
 
-  <link rel="stylesheet" href="style.css" />
-</head>
+a {
+  color: inherit;
+}
 
-<body>
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.045;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.22) 0 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.16) 0 1px, transparent 1px);
+  background-size: 80px 80px, 120px 120px;
+}
 
-  <div class="noise"></div>
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("assets/images/Hero.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
 
-  <header class="hero">
-    <div class="hero-overlay"></div>
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(5, 6, 8, 0.92) 0%, rgba(5, 6, 8, 0.64) 34%, rgba(5, 6, 8, 0.1) 68%, rgba(5, 6, 8, 0.35) 100%),
+    linear-gradient(180deg, rgba(5, 6, 8, 0.05) 0%, rgba(5, 6, 8, 0.35) 62%, #050608 100%);
+}
 
-    <nav class="navbar">
-      <div class="logo">VLAD GRYBAN</div>
+.navbar {
+  position: relative;
+  z-index: 2;
+  height: 90px;
+  padding: 0 7vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-      <div class="nav-links">
-        <a href="#works">Works</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+.logo {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 7px;
+  color: #fff;
+}
 
-    <div class="hero-content">
-      <p class="eyebrow">DIRECTOR • VFX SUPERVISOR • CG ARTIST</p>
+.nav-links {
+  display: flex;
+  gap: 34px;
+}
 
-      <h1>Cinematic Worlds,<br>CGI & Visual Storytelling</h1>
+.nav-links a {
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.68);
+  transition: 0.25s ease;
+}
 
-      <p class="description">
-        Ukrainian director and CG artist focused on cinematic commercials,
-        immersive CGI experiences, animated storytelling and high-end VFX production.
-      </p>
+.nav-links a:hover {
+  color: #d58b3e;
+}
 
-      <div class="hero-buttons">
-        <a href="#works" class="button primary">VIEW WORKS</a>
-        <a href="#contact" class="button secondary">CONTACT</a>
-      </div>
-    </div>
-  </header>
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding-left: 7vw;
+  padding-top: 17vh;
+}
 
+.eyebrow {
+  color: #d58b3e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
 
-  <main>
+.hero h1,
+.section h2,
+.contact h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+}
 
-    <section class="section intro">
-      <div class="intro-line"></div>
+.hero h1 {
+  font-size: clamp(56px, 6.6vw, 108px);
+  line-height: 0.92;
+  letter-spacing: -2px;
+  margin-bottom: 34px;
+}
 
-      <p>
-        Creating cinematic experiences through directing, CGI, VFX supervision
-        and emotionally driven visual storytelling.
-      </p>
-    </section>
+.description {
+  max-width: 560px;
+  color: rgba(255,255,255,0.72);
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 44px;
+}
 
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
-    <section id="works" class="section works">
-      <div class="section-heading">
-        <p class="eyebrow">SELECTED WORKS</p>
-        <h2>Featured Projects</h2>
-      </div>
+.button {
+  display: inline-block;
+  padding: 17px 28px;
+  border: 1px solid rgba(213, 139, 62, 0.75);
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2.6px;
+  transition: 0.25s ease;
+}
 
-      <div class="projects-grid">
+.button.primary {
+  background: rgba(213, 139, 62, 0.16);
+}
 
-        <a class="project-card large" href="https://www.behance.net/gallery/250088651/oselja-New-Year-Campaign-2025" target="_blank">
-          <img src="assets/images/Page_01a.png" alt="eOselya New Year Campaign">
+.button.secondary {
+  border-color: rgba(255,255,255,0.24);
+}
 
-          <div class="project-gradient"></div>
+.button:hover {
+  background: #d58b3e;
+  color: #050608;
+}
 
-          <div class="project-info">
-            <span>2025 • Commercial • View on Behance</span>
-            <h3>eOselya — New Year Campaign</h3>
-            <p>
-              Warm cinematic holiday commercial created for Ukrfinzhytlo.
-              Direction, cinematography, editing and VFX production.
-            </p>
-          </div>
-        </a>
+.section {
+  padding: 120px 7vw;
+}
 
-        <a class="project-card" href="https://www.behance.net/gallery/250084257/BestBuy-3D-Anamorphic-Video-for-Gulliver-LED-Screen" target="_blank">
-          <img src="assets/images/Page_2и.png" alt="BestBuy Anamorphic LED Video">
+.intro {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 46px;
+  align-items: center;
+}
 
-          <div class="project-gradient"></div>
+.intro-line {
+  width: 100%;
+  height: 1px;
+  background: #d58b3e;
+}
 
-          <div class="project-info">
-            <span>3D Anamorphic CGI • View on Behance</span>
-            <h3>BestBuy — Gulliver LED Screen</h3>
-            <p>
-              Full-cycle anamorphic LED video designed for one of Kyiv’s largest media facades.
-            </p>
-          </div>
-        </a>
+.intro p {
+  max-width: 980px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(34px, 4vw, 64px);
+  line-height: 1.08;
+  color: rgba(255,255,255,0.9);
+}
 
-        <a class="project-card" href="https://www.behance.net/gallery/249985835/HARON-Cinematic-CGI-UAV-Presentation" target="_blank">
-          <img src="assets/images/Haron.png" alt="HARON Drone CGI Visualization">
+.section-heading {
+  margin-bottom: 48px;
+}
 
-          <div class="project-gradient"></div>
+.section h2 {
+  font-size: clamp(42px, 5vw, 82px);
+  line-height: 1;
+}
 
-          <div class="project-info">
-            <span>Cinematic UAV Presentation • View on Behance</span>
-            <h3>HARON Drone</h3>
-            <p>
-              CGI visualization of a military UAV based on engineering drawings and references.
-            </p>
-          </div>
-        </a>
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 34px;
+}
 
-        <article class="project-card">
-          <img src="assets/images/Flower_mind.jpg" alt="Flower of Mind animated film">
+.project-card {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  background: #0b0d10;
+  border: 1px solid rgba(255,255,255,0.08);
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
 
-          <div class="project-gradient"></div>
+.project-card.large {
+  grid-column: span 2;
+  min-height: 620px;
+}
 
-          <div class="project-info">
-            <span>Animated Sci-Fi Film • Coming Soon</span>
-            <h3>Flower of Mind</h3>
-            <p>
-              Diploma animated film combining directing, worldbuilding,
-              motion capture and CGI storytelling.
-            </p>
-          </div>
-        </article>
+.project-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.05) brightness(0.82);
+  transition: 0.7s ease;
+}
 
-      </div>
-    </section>
+.project-card:hover img {
+  transform: scale(1.055);
+  filter: contrast(1.08) brightness(0.95);
+}
 
+.project-card:hover {
+  border-color: rgba(213, 139, 62, 0.42);
+}
 
-    <section id="about" class="section about">
+.project-gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.82) 100%),
+    linear-gradient(90deg, rgba(0,0,0,0.65), transparent 65%);
+}
 
-      <div class="about-image">
-        <img src="assets/images/Vlad_Gryban.jpg" alt="Vlad Gryban portrait">
-      </div>
+.project-info {
+  position: absolute;
+  left: 34px;
+  bottom: 34px;
+  z-index: 2;
+  max-width: 620px;
+}
 
-      <div class="about-content">
-        <p class="eyebrow">ABOUT</p>
+.project-info span {
+  display: block;
+  color: #d58b3e;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
 
-        <h2>Director with a strong CGI and VFX production background.</h2>
+.project-info h3 {
+  font-size: clamp(28px, 3vw, 48px);
+  margin-bottom: 14px;
+}
 
-        <p>
-          I’m Vlad Gryban — a Ukrainian director, VFX supervisor and CG artist based in Kyiv (GMT+3).
-        </p>
+.project-info p {
+  color: rgba(255,255,255,0.72);
+  line-height: 1.7;
+  max-width: 560px;
+}
 
-        <p>
-          I specialize in cinematic storytelling, CGI production, motion design and immersive visual experiences.
-          My background combines directing, editing, VFX, animation and commercial production pipelines.
-        </p>
+.about {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 70px;
+  align-items: center;
+  background:
+    radial-gradient(circle at top right, rgba(213, 139, 62, 0.08), transparent 32%),
+    #070809;
+}
 
-        <p>
-          Experienced in both independent and collaborative productions, I focus on creating atmospheric visuals,
-          strong cinematic language and emotionally engaging worlds across commercials, animated films and
-          experimental digital projects.
-        </p>
+.about-image {
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  min-height: 620px;
+}
 
-        <div class="skills">
-          <span>3DS MAX</span>
-          <span>UNREAL ENGINE</span>
-          <span>AFTER EFFECTS</span>
-          <span>DAVINCI RESOLVE</span>
-          <span>PREMIERE PRO</span>
-          <span>REDSHIFT</span>
-          <span>V-RAY</span>
-          <span>CORONA</span>
-          <span>AI WORKFLOW</span>
-        </div>
-      </div>
+.about-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 620px;
+  object-fit: cover;
+  filter: contrast(1.04) brightness(0.88);
+}
 
-    </section>
+.about-content h2 {
+  font-size: clamp(38px, 4.8vw, 76px);
+  line-height: 1.02;
+  margin-bottom: 34px;
+}
 
+.about-content p {
+  color: rgba(255,255,255,0.68);
+  line-height: 1.9;
+  font-size: 17px;
+  margin-bottom: 24px;
+  max-width: 780px;
+}
 
-    <section class="section credentials">
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
 
-      <div class="credential-card">
-        <p class="eyebrow">EDUCATION</p>
-        <h3>Film & Television Directing</h3>
-        <p>
-          Bachelor’s Degree at Kyiv University of Culture. Diploma project:
-          “Flower of Mind” — sci-fi animated film developed through screenwriting,
-          visual language, motion capture, CGI and AI-assisted workflows.
-        </p>
-      </div>
+.skills span {
+  border: 1px solid rgba(213, 139, 62, 0.36);
+  color: rgba(255,255,255,0.78);
+  padding: 10px 14px;
+  font-size: 11px;
+  letter-spacing: 1.7px;
+}
 
-      <div class="credential-card">
-        <p class="eyebrow">CERTIFICATION</p>
-        <h3>Autodesk / 3ds Max</h3>
-        <p>
-          Certified in Architectural Visualization using 3ds Max.
-          Skilled in rendering pipelines with Corona Renderer, V-Ray, Chaos Vantage and Redshift.
-        </p>
-      </div>
+.credentials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 34px;
+}
 
-    </section>
+.credential-card {
+  min-height: 300px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 44px;
+}
 
+.credential-card h3 {
+  font-size: 32px;
+  margin-bottom: 22px;
+}
 
-    <section id="contact" class="section contact">
-      <p class="eyebrow">CONTACT</p>
+.credential-card p {
+  color: rgba(255,255,255,0.68);
+  line-height: 1.85;
+}
 
-      <h2>Let’s create cinematic worlds together.</h2>
+.contact {
+  text-align: center;
+  min-height: 62vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-      <p class="contact-text">
-        Open for commercials, cinematic CGI production,
-        VFX supervision and experimental visual storytelling.
-      </p>
+.contact h2 {
+  font-size: clamp(44px, 5vw, 86px);
+  margin-bottom: 28px;
+}
 
-      <div class="contact-links">
-        <a href="https://www.behance.net/vladyslavgryban" target="_blank">Behance</a>
-        <a href="https://www.instagram.com/nogriban/" target="_blank">Instagram</a>
-        <a href="https://www.linkedin.com/in/vlad-gryban-53a7a920a/" target="_blank">LinkedIn</a>
-        <a href="mailto:vladyslavgryban@gmail.com">Email</a>
-      </div>
-    </section>
+.contact-text {
+  max-width: 700px;
+  margin: 0 auto 42px;
+  color: rgba(255,255,255,0.65);
+  font-size: 17px;
+  line-height: 1.8;
+}
 
-  </main>
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+  flex-wrap: wrap;
+}
 
-</body>
-</html>
+.contact-links a {
+  color: rgba(255,255,255,0.82);
+  text-decoration: none;
+  border-bottom: 1px solid #d58b3e;
+  padding-bottom: 8px;
+  transition: 0.25s ease;
+}
+
+.contact-links a:hover {
+  color: #d58b3e;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 28px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    background-position: 62% center;
+  }
+
+  .hero-content {
+    padding: 18vh 28px 0;
+  }
+
+  .section {
+    padding: 86px 28px;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid,
+  .about,
+  .credentials {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card.large {
+    grid-column: span 1;
+  }
+
+  .project-card,
+  .project-card.large {
+    min-height: 460px;
+  }
+
+  .about-image,
+  .about-image img {
+    min-height: 420px;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+  }
+}
