@@ -1,29 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vlad Griban Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vlad Griban Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <section class="hero">
-        <div class="overlay"></div>
+  <header class="hero">
 
-        <div class="hero-content">
-            <h1>VLAD GRYBAN</h1>
+    <div class="overlay"></div>
 
-            <p class="subtitle">
-                DIRECTOR • VFX SUPERVISOR • CG ARTIST
-            </p>
+    <nav class="navbar">
+      <div class="logo">VLAD GRYBAN</div>
 
-            <p class="description">
-                Cinematic worlds, CGI storytelling, motion design
-                and immersive visual experiences.
-            </p>
+      <div class="nav-links">
+        <a href="#works">Works</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+
+      <p class="subtitle">
+        DIRECTOR • VFX SUPERVISOR • CG ARTIST
+      </p>
+
+      <h1>
+        Cinematic CGI,<br>
+        VFX & Storytelling
+      </h1>
+
+      <p class="description">
+        Director and CG artist focused on cinematic storytelling,
+        animated worlds, VFX supervision and immersive visual experiences.
+      </p>
+
+      <a class="hero-button" href="#works">
+        VIEW PROJECTS
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <section id="works" class="works-section">
+
+    <div class="section-title">
+      Selected Works
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop" alt="">
+        <div class="project-info">
+          <h3>eOselya — New Year Campaign</h3>
+          <p>Cinematic commercial / Direction / Editing</p>
         </div>
-    </section>
+      </div>
+
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1600&auto=format&fit=crop" alt="">
+        <div class="project-info">
+          <h3>BestBuy — Anamorphic LED Video</h3>
+          <p>3D Anamorphic CGI / Motion Design</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1600&auto=format&fit=crop" alt="">
+        <div class="project-info">
+          <h3>HARON Drone</h3>
+          <p>Cinematic CGI UAV Visualization</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop" alt="">
+        <div class="project-info">
+          <h3>Flower of Mind</h3>
+          <p>Sci-Fi Animated Film / Diploma Project</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="about" class="about-section">
+
+    <div class="about-left">
+
+      <div class="section-title">
+        About
+      </div>
+
+      <p>
+        I'm a Ukrainian director, VFX supervisor and CG artist focused on
+        cinematic storytelling, sci-fi worlds and immersive visual experiences.
+      </p>
+
+      <p>
+        My work combines directing, CGI, motion design,
+        worldbuilding and virtual production pipelines.
+      </p>
+
+      <p>
+        I specialize in cinematic commercials, animated films,
+        anamorphic LED content and VFX-driven productions.
+      </p>
+
+    </div>
+
+    <div class="about-right">
+
+      <div class="skills-box">
+
+        <h3>Tools & Pipeline</h3>
+
+        <ul>
+          <li>3ds Max</li>
+          <li>Unreal Engine</li>
+          <li>After Effects</li>
+          <li>DaVinci Resolve</li>
+          <li>Premiere Pro</li>
+          <li>TyFlow</li>
+          <li>Redshift</li>
+          <li>Corona Renderer</li>
+          <li>V-Ray</li>
+          <li>AI Workflow</li>
+        </ul>
+
+      </div>
+
+      <div class="skills-box">
+
+        <h3>Education</h3>
+
+        <p>
+          Bachelor’s Degree in Film & Television Directing
+        </p>
+
+        <p>
+          Kyiv University of Culture
+        </p>
+
+        <p>
+          Autodesk Certified in Architectural Visualization using 3ds Max
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="contact" class="contact-section">
+
+    <div class="section-title">
+      Contact
+    </div>
+
+    <p>
+      Open for cinematic CGI, VFX supervision,
+      commercials and animated projects.
+    </p>
+
+    <div class="contact-links">
+      <a href="https://www.behance.net/" target="_blank">Behance</a>
+      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+      <a href="mailto:your@email.com">Email</a>
+    </div>
+
+  </section>
 
 </body>
 </html>
