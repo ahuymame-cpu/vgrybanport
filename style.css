@@ -24,17 +24,17 @@ a {
   inset: 0;
   pointer-events: none;
   z-index: 100;
-  opacity: 0.05;
+  opacity: 0.045;
   background-image:
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.25) 0 1px, transparent 1px),
-    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.18) 0 1px, transparent 1px);
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.22) 0 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.16) 0 1px, transparent 1px);
   background-size: 80px 80px, 120px 120px;
 }
 
 .hero {
   position: relative;
   min-height: 100vh;
-  background-image: url("assets/images/Page_2и.png");
+  background-image: url("assets/images/Hero.png");
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -44,9 +44,8 @@ a {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 70% 45%, rgba(213, 139, 62, 0.12), transparent 36%),
-    linear-gradient(90deg, rgba(5, 6, 8, 0.98) 0%, rgba(5, 6, 8, 0.82) 42%, rgba(5, 6, 8, 0.3) 100%),
-    linear-gradient(180deg, rgba(5, 6, 8, 0.1) 0%, #050608 100%);
+    linear-gradient(90deg, rgba(5, 6, 8, 0.92) 0%, rgba(5, 6, 8, 0.64) 34%, rgba(5, 6, 8, 0.1) 68%, rgba(5, 6, 8, 0.35) 100%),
+    linear-gradient(180deg, rgba(5, 6, 8, 0.05) 0%, rgba(5, 6, 8, 0.35) 62%, #050608 100%);
 }
 
 .navbar {
@@ -76,7 +75,7 @@ a {
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.62);
+  color: rgba(255,255,255,0.68);
   transition: 0.25s ease;
 }
 
@@ -87,7 +86,7 @@ a {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 820px;
+  max-width: 720px;
   padding-left: 7vw;
   padding-top: 17vh;
 }
@@ -109,14 +108,14 @@ a {
 }
 
 .hero h1 {
-  font-size: clamp(58px, 7vw, 116px);
+  font-size: clamp(56px, 6.6vw, 108px);
   line-height: 0.92;
   letter-spacing: -2px;
   margin-bottom: 34px;
 }
 
 .description {
-  max-width: 620px;
+  max-width: 560px;
   color: rgba(255,255,255,0.72);
   font-size: 18px;
   line-height: 1.8;
@@ -145,7 +144,7 @@ a {
 }
 
 .button.secondary {
-  border-color: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.24);
 }
 
 .button:hover {
@@ -383,6 +382,10 @@ a {
 
   .nav-links {
     display: none;
+  }
+
+  .hero {
+    background-position: 62% center;
   }
 
   .hero-content {
