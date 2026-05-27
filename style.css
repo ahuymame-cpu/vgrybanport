@@ -86,9 +86,9 @@ a {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 720px;
+  max-width: 760px;
   padding-left: 7vw;
-  padding-top: 17vh;
+  padding-top: 15vh;
 }
 
 .eyebrow {
@@ -108,7 +108,7 @@ a {
 }
 
 .hero h1 {
-  font-size: clamp(56px, 6.6vw, 108px);
+  font-size: clamp(52px, 6.2vw, 104px);
   line-height: 0.92;
   letter-spacing: -2px;
   margin-bottom: 34px;
@@ -122,7 +122,8 @@ a {
   margin-bottom: 44px;
 }
 
-.hero-buttons {
+.hero-buttons,
+.contact-actions {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
@@ -130,12 +131,14 @@ a {
 
 .button {
   display: inline-block;
-  padding: 17px 28px;
+  min-width: 150px;
+  text-align: center;
+  padding: 17px 24px;
   border: 1px solid rgba(213, 139, 62, 0.75);
   color: white;
   text-decoration: none;
-  font-size: 12px;
-  letter-spacing: 2.6px;
+  font-size: 11px;
+  letter-spacing: 2.2px;
   transition: 0.25s ease;
 }
 
@@ -379,7 +382,7 @@ a {
 
 .contact {
   text-align: center;
-  min-height: 62vh;
+  min-height: 66vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -395,10 +398,15 @@ a {
 
 .contact-text {
   max-width: 700px;
-  margin: 0 auto 42px;
+  margin: 0 auto 36px;
   color: rgba(255,255,255,0.65);
   font-size: 17px;
   line-height: 1.8;
+}
+
+.contact-actions {
+  justify-content: center;
+  margin-bottom: 42px;
 }
 
 .contact-links {
@@ -434,7 +442,7 @@ a {
   }
 
   .hero-content {
-    padding: 18vh 28px 0;
+    padding: 16vh 28px 0;
   }
 
   .section {
@@ -474,6 +482,6 @@ a {
   }
 
   .hero h1 {
-    font-size: 56px;
+    font-size: 54px;
   }
 }
